@@ -11,15 +11,13 @@ Repository Structure
 
 text
 RaceDay/
-├── .github/
-│   └── workflows/
-│       └── validate-docs.yml     CI/CD documentation validation workflow
-├── docs/
-│   ├── ERD.png                   Entity Relationship Diagram
-│   ├── endpoints.md              RESTful API Endpoint Specification Plan & Requirements Mapping
-│   ├── schema.sql                SQL DDL Script & Seed Data (Microsoft SQL Server)
-│   ├── part2-req1.png            Part 2 Requirements Screenshot Page 1
-│   └── part2-req2.png            Part 2 Requirements Screenshot Page 2
+.github/
+workflows/
+validate-docs.yml     CI/CD documentation validation workflow
+docs/
+ERD.png                   Entity Relationship Diagram
+endpoints.md              RESTful API Endpoint Specification Plan & Requirements Mapping
+schema.sql                SQL DDL Script & Seed Data (Microsoft SQL Server)
 └── README.md                     Project overview and setup documentation
 
 
