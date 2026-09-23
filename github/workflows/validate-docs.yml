@@ -1,0 +1,37 @@
+name: Validate Documentation Structure
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Verify /docs Folder + Documentation Files
+        run: |
+          echo "Checking repository structure..."
+          if [ ! -d "docs" ]; then
+            echo "Error: /docs directory missing!"
+            exit 1
+          fi
+          
+          echo "Found /docs directory. Checking required files..."
+          
+          if [ ! -f "docs/schema.sql" ]; then
+            echo "Error: docs/schema.sql missing!"
+            exit 1
+          fi
+          
+          if [ ! -f "docs/endpoints.md" ]; then
+            echo "Error: docs/endpoints.md missing!"
+            exit 1
+          fi
+
+          echo "All required documentation files verified successfully!"
