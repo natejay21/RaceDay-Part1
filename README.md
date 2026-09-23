@@ -50,6 +50,8 @@ Open and execute the initialization script located at docs/schema.sql.
 
 Verify table creation (Users, Events, Categories, Routes, Enrolments, Results) and seeded test data.
 
+https://youtu.be/EO3d2NoJXgQ
+
 
 
 
